@@ -1,0 +1,656 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  /*background: rgb(26, 25, 25);*/
+  background: var(--cor-principal);
+  scroll-behavior: smooth;
+}
+
+:root {
+  --cor-principal: rgb(26, 25, 25);
+  --cor-links-hover: rgb(143, 28, 28);
+  --cor-links-hover2: #777;
+  --cor-menu-scroll: rgba(103, 94, 94, 0.207);
+  --cor-font: #fff;
+  --cor-folder: #40d59c;
+
+  --cor-whatsapp: #20b657;
+
+  --cor-botao-hover: rgb(170, 53, 53);
+
+  --cor-html: rgb(143, 28, 28);
+  --cor-css: rgb(11, 87, 145);
+  --cor-js: #8c7404;
+  --cor-react: #203a63;
+
+  --cor-botao: rgb(30, 28, 28);
+  --cor-borda-botao: rgb(185, 139, 139);
+
+  font-size: 62.5%;
+}
+
+#principal {
+  margin: 0 auto;
+  width: 110rem;
+  min-width: 110rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 2.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+/*---------- HEADER ----------*/
+
+#header .sel {
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  background: var(--cor-links-hover);
+}
+
+#header .li-inf li a:hover {
+  background: var(--cor-links-hover);
+}
+
+#header {
+  position: fixed;
+  min-width: 110rem;
+  /* Deixa um efeito de vidro no background */
+  backdrop-filter: blur(5px);
+}
+
+#header.scroll {
+  background: var(--cor-menu-scroll);
+  height: 10rem;
+  border-radius: 0px 0px 8px 8px;
+}
+
+#header .logo {
+  display: inline-block;
+}
+
+#header .li-inf {
+  margin-left: 43%;
+}
+
+#header .li-inf a {
+  font-size: 1.8rem;
+  color: var(--cor-font);
+  display: block;
+  border-radius: 1rem;
+  padding: 0.8rem 2rem;
+  transition: 0.3s;
+}
+
+#header .li-inf ul {
+  margin-top: -11rem;
+  display: flex;
+  gap: 1rem;
+}
+
+#header .li-inf li {
+  display: inline-block;
+  margin-top: 3.8rem;
+}
+
+#header .li-inf li:hover {
+  border-radius: 1rem;
+}
+
+/*----CONTEUDO-----*/
+
+.conteudo {
+  width: 110rem;
+}
+
+/*-------------- QUEM SOU ---------------*/
+
+#principal .quem-sou {
+  padding-top: 40rem;
+  margin-left: 2.5rem;
+  color: var(--cor-font);
+  width: 35rem;
+}
+
+#principal .quem-sou h2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--cor-font);
+  padding: 1rem 0rem;
+}
+
+#principal .quem-sou h3 {
+  font-size: 1.8rem;
+}
+
+#principal .quem-sou h2 span {
+  color: var(--cor-links-hover);
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+#principal .quem-sou p {
+  border-right: 2px solid var(--cor-links-hover);
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/*--------------- Animação ------------------*/
+
+.tipo-animação {
+  animation: PiscaCursor 500ms steps(40) infinite normal,
+    ida-cursor 6s steps(42) 1s normal infinite;
+}
+
+@keyframes ida-cursor {
+  from {
+    width: 0;
+  }
+  to {
+    width: 32rem;
+  }
+}
+
+@keyframes PiscaCursor {
+  from {
+    border-right-color: var(--cor-font);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/*------------------------------*/
+
+#principal .social {
+  margin-top: 3rem;
+}
+
+#principal .social li {
+  display: inline-block;
+  padding: 1.2rem;
+  margin-left: 0.8rem;
+  border-radius: 100%;
+  border: 1px solid var(--cor-font);
+  background: rgb(30, 29, 29);
+}
+
+#principal .social li a {
+  color: var(--cor-font);
+}
+
+#principal .social li {
+  transition: 0.3s;
+}
+
+#principal .social li:hover {
+  transform: translateY(-8px) scale(1.1);
+}
+
+/*-------------- AVATAR ---------------*/
+
+#principal .avatar img {
+  width: 50rem;
+  float: right;
+  margin-top: -35rem;
+}
+
+/*---------- SOBRE MIM ----------*/
+
+#principal #sobre-mim h2 {
+  margin-top: 45rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--cor-links-hover);
+  text-transform: uppercase;
+  padding-top: 10rem;
+}
+
+#principal #sobre-mim img {
+  width: 40rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  border: 12px solid rgb(30, 29, 29);
+  box-shadow: 1px 1px 1px 1px var(--cor-font);
+}
+
+#principal #sobre-mim .alin-text {
+  width: 50rem;
+  float: right;
+  margin-right: 6rem;
+  margin-top: 3.5rem;
+
+  color: rgb(169, 169, 169);
+}
+
+#principal #sobre-mim .alin-text p {
+  padding: 1rem 0.5rem;
+}
+
+#principal #sobre-mim .alin-text p span {
+  color: var(--cor-font);
+  padding-top: 0rem;
+}
+
+#principal #sobre-mim .alin-text a {
+  width: 14rem;
+  margin-top: 2rem;
+  margin-left: 0.8rem;
+  background: var(--cor-botao);
+  color: var(--cor-font);
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  float: left;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px transparent;
+  border: 2px solid var(--cor-borda-botao);
+  font-weight: 700;
+  animation: bordas 3s linear infinite alternate-reverse;
+
+  transition: 0.3s;
+}
+
+#principal #sobre-mim .alin-text a:hover {
+  transform: scale(1.1) translateY(-5px);
+  color: var(--cor-links-hover);
+}
+
+@keyframes bordas {
+  0% {
+    box-shadow: 0 0 10px var(--cor-links-hover);
+    color: var(--cor-links-hover);
+    border-color: var(--cor-borda-botao);
+  }
+  25% {
+    box-shadow: 0 0 10px rgb(101, 101, 226);
+    color: rgb(101, 101, 226);
+    border-color: rgb(101, 101, 226);
+  }
+
+  50% {
+    box-shadow: 0 0 10px rgb(252, 53, 53);
+    color: rgb(252, 53, 53);
+    border-color: rgb(252, 53, 53);
+  }
+  75% {
+    box-shadow: 0 0 10px green;
+    color: green;
+    border-color: green;
+  }
+  100% {
+    box-shadow: 0 0 10px yellow;
+    color: yellow;
+    border-color: yellow;
+  }
+}
+
+/*------- Habilidades -------------*/
+
+#principal .tecnologias {
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 40rem;
+  padding-top: 10rem;
+}
+
+/* Estilos do h2 */
+
+#principal .tecnologias h2 {
+  margin-top: 30rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--cor-links-hover);
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+#principal .tecnologias .tablink {
+  background-color: var(--cor-botao);
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+/* Estilos do botão hover */
+#principal .tecnologias .tablink:hover {
+  background-color: var(--cor-links-hover2);
+}
+
+/* Set default styles for tab content */
+#principal .tecnologias .tabcontent {
+  color: rgb(169, 169, 169);
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#principal .tecnologias .tabcontent .icon {
+  margin-top: -3.5rem;
+  margin-bottom: 2rem;
+}
+
+#principal .tecnologias .tabcontent .icon h1 {
+  margin-top: 1rem;
+  color: #fff;
+}
+
+#principal .tecnologias .tabcontent .icon img {
+  width: 4.8rem;
+}
+
+/* Style each tab content individually */
+#html {
+  background-color: var(--cor-html);
+}
+#css {
+  background-color: var(--cor-css);
+}
+#js {
+  background-color: var(--cor-js);
+}
+#react {
+  background-color: var(--cor-react);
+}
+
+/* Meus Projetos */
+#principal #meus-projetos h2 {
+  margin-top: 26rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--cor-links-hover);
+  text-transform: uppercase;
+  padding-top: 10rem;
+}
+
+#principal #meus-projetos #projetos .caixa_projeto {
+  display: inline-block;
+  background: var(--cor-botao);
+  width: 30rem;
+  margin-left: 3rem;
+  margin-top: 5rem;
+  border-radius: 5px;
+}
+
+#principal #meus-projetos #projetos .caixa_projeto {
+  padding: 1.5rem;
+}
+
+#principal #meus-projetos #projetos .caixa_projeto img {
+  height: 5rem;
+  width: 6rem;
+  display: flex;
+  margin: 0 auto;
+}
+
+#principal #meus-projetos #projetos a {
+  display: block;
+  background: var(--cor-links-hover);
+  color: var(--cor-font);
+  padding: 2rem;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 5rem;
+  width: 20rem;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+
+  transition: 0.3s;
+}
+
+#principal #meus-projetos #projetos a:hover {
+  background-color: var(--cor-botao-hover);
+  transform: scale(1.1) translateY(-10px);
+}
+
+#principal #meus-projetos #projetos .caixa_projeto h3 {
+  color: var(--cor-font);
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+#principal #meus-projetos #projetos .caixa_projeto p {
+  margin-top: 0.8rem;
+  color: var(--cor-links-hover2);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+#principal #meus-projetos #projetos .caixa_projeto h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--cor-folder);
+}
+
+#principal #meus-projetos #projetos .caixa_projeto .imagem_tecnologia {
+  margin-bottom: 1rem;
+  margin-left: -1rem;
+  object-fit: scale-down;
+}
+
+#principal #meus-projetos #projetos .caixa_projeto h6 {
+  font-size: 1rem;
+  color: var(--cor-font);
+  font-weight: 500;
+}
+
+/* Contatos */
+#principal #contatos h2 {
+  margin-top: 26rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--cor-links-hover);
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  padding-top: 10rem;
+}
+
+/* EMAIL */
+
+#principal #contatos .email {
+  width: 35rem;
+  border-radius: 5px;
+  float: right;
+  margin-bottom: 15rem;
+  background: var(--cor-botao);
+  padding: 2rem;
+  margin-right: 5rem;
+}
+
+#principal #contatos .email h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--cor-links-hover2);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+#principal #contatos .email span {
+  display: block;
+  color: var(--cor-links-hover2);
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+#principal #contatos .email input {
+  margin-top: 0.5rem;
+  width: 34.5rem;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+}
+
+#principal #contatos .email textarea {
+  resize: none;
+  margin-top: 3rem;
+  width: 33rem;
+  height: 20rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+#principal #contatos .email button {
+  display: block;
+  background: var(--cor-links-hover);
+  color: var(--cor-font);
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  width: 20rem;
+  height: 4rem;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: 0.3s;
+}
+
+#principal #contatos .email button:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* INFORMAÇÕES-PESSOAL */
+#principal #contatos .info-pessoal {
+  width: 35rem;
+  border-radius: 5px;
+  float: left;
+  margin-bottom: 15rem;
+  background: var(--cor-botao);
+  padding: 1.8rem;
+  margin-left: 5rem;
+}
+
+#principal #contatos .info-pessoal .conteudo p {
+  width: 35rem;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  color: var(--cor-font);
+}
+
+#principal #contatos .info-pessoal .conteudo h2 {
+  width: 35rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--cor-links-hover2);
+  text-transform: uppercase;
+  margin-top: -10rem;
+  margin-bottom: 2rem;
+}
+
+#principal #contatos .info-pessoal .info span {
+  display: flex;
+  margin-left: 3.5rem;
+  margin-top: -3rem;
+  font-size: 1.6rem;
+  color: var(--cor-links-hover2);
+  text-transform: uppercase;
+}
+
+#principal #contatos .info-pessoal .info p {
+  font-size: 1.2rem;
+  margin-left: 3.5rem;
+  color: var(--cor-links-hover2);
+  margin-bottom: 3.5rem;
+}
+
+#principal #contatos .info-pessoal .button {
+  display: block;
+  background: var(--cor-whatsapp);
+  color: var(--cor-font);
+  text-shadow: 1px 0 #1b9849;
+  padding: 1rem;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  width: 20rem;
+  height: 4rem;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+
+  transition: 0.3s;
+}
+
+#principal #contatos .info-pessoal .button:hover {
+  background-image: url(img/whats.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  text-align: left;
+  padding-left: 4.5rem;
+}
+
+#principal .social_fundo {
+  width: 100%;
+  height: 10rem;
+
+  background: var(--cor-botao);
+  text-align: center;
+
+  border-radius: 10px;
+}
+
+#principal .social_fundo li {
+  display: inline-block;
+  padding: 1.2rem;
+  margin-left: 5rem;
+  border-radius: 100%;
+  border: 1px solid var(--cor-font);
+  background: rgb(30, 29, 29);
+
+  margin-top: 2rem;
+}
+
+#principal .social_fundo li:hover {
+  transform: translateY(-8px) scale(1.1);
+
+  transition: 0.3s;
+}
+
+#principal .social_fundo li a {
+  text-align: center;
+  color: #fff;
+}
+
+.clear {
+  clear: both;
+}
