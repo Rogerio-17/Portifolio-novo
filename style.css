@@ -320,7 +320,7 @@ h6 {
 /* Estilos do h2 */
 
 #principal .tecnologias h2 {
-  margin-top: 30rem;
+  margin-top: 10rem;
   text-align: center;
   font-size: 3.5rem;
   color: var(--cor-links-hover);
