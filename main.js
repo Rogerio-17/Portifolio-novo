@@ -65,7 +65,6 @@ function getApiGitHub() {
           nome_projeto !== "Not-cia-cidade" &&
           nome_projeto !== "Rogerio-17"
         ) {
-          console.log(item);
           /*--- Criando a imagem e definindo o link ---*/
           const img = document.createElement("img");
           img.src = "./img/folder-1.png";
